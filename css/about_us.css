@@ -1,0 +1,850 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: "Philosopher", "Noto Serif KR", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2b2b2b;
+}
+
+#wrap {
+    min-width: 1904px;
+}
+
+/* =============== header =============== */
+/* promotion_slide */
+#promotion_slide {
+    width: 100%;
+    height: 30px;
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    padding-top: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#promotion_slide ul {
+    position: relative;
+}
+
+#promotion_slide li {
+    height: 30px;
+    text-align: center;
+}
+
+
+/* ================ gnb ================ */
+
+#gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1844px;
+    height: 74px;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    transition: transform 0.4s ease;
+}
+
+#gnb.fixed {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    background-color: transparent;
+}
+
+#gnb.fixed.hide {
+    transform: translateY(-100%);
+}
+
+.gnb_wrap {
+    width: 40%;
+    display: flex;
+    gap: 40px;
+}
+
+.logo {
+    width: 20%;
+    text-align: center;
+}
+
+.logo img {
+    width: 280px;
+}
+
+.util {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+
+.util img {
+    width: 24px;
+}
+
+.util li:nth-child(3) img {
+    width: 25px;
+}
+
+
+/* ================ banner ================ */
+.brand_story_banner {
+    position: relative;
+    width: 100%;
+}
+
+.brand_story_banner > img {
+    display: block;
+    width: 100%;
+}
+
+.brand_story_text {
+    position: absolute;
+    font-family: "Noto Serif KR";
+    color: #2b2b2b;
+}
+
+
+/* 왼쪽 위 est. 2026 */
+
+.brand_est {
+    top: 12%;
+    left: 4.2%;
+
+    font-size: 30px;
+    line-height: 1.35;
+
+    opacity: 0.9;
+}
+
+.brand_est p {
+    margin: 0;
+}
+
+
+/* 메인 카피 */
+
+.brand_copy {
+    top: 47%;
+    left: 6.3%;
+}
+
+.brand_copy > p {
+    margin: 0;
+    font-size: 60px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.brand_copy em {
+    color: #f6f1eb;
+}
+
+.brand_copy span {
+    display: block;
+    margin-top: 35px;
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 0.025em;
+
+    opacity: 0.9;
+}
+
+
+/* 오른쪽 상단 */
+
+.brand_side {
+    top: 17%;
+    right: 4%;
+
+    text-align: end;
+
+    font-size: 30px;
+    line-height: 1.05;
+    opacity: 0.9;
+}
+
+.brand_side p {
+    margin: 0;
+}
+
+
+/* ================= gradient_wrap ================= */
+#gradient_wrap {
+    width: 100%;
+    background: #E6E4E1;
+    background: linear-gradient(180deg, rgba(230, 228, 225, 1) 0%, rgba(255, 255, 255, 0.94) 100%);
+}
+
+
+/* ==================================================
+   OUR PHILOSOPHY
+================================================== */
+
+#philosophy {
+    width: 100%;
+    height: 200vh;
+
+    position: relative;
+}
+
+.philosophy_scene {
+    width: 100%;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    overflow: hidden;
+}
+
+.philosophy_title {
+    position: absolute;
+    top: 50px;
+    right: 10.3%;
+    font-size: 105px;
+    font-weight: 400;
+    color: #fff;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.philosophy_title span {
+    font-style: italic;
+}
+
+.philosophy_words {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+}
+
+.moving_word {
+    position: absolute;
+    white-space: nowrap;
+    z-index: 5;
+
+    line-height: 1;
+
+    animation: wordFloat 3s ease-in-out infinite alternate;
+
+    transition:
+        left 0.8s cubic-bezier(.22, .74, .18, 1),
+        top 0.8s cubic-bezier(.22, .74, .18, 1),
+        font-size 0.8s cubic-bezier(.22, .74, .18, 1),
+        line-height 0.8s cubic-bezier(.22, .74, .18, 1);
+}
+
+@keyframes wordFloat {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(4px, -5px);
+    }
+
+    100% {
+        transform: translate(-4px, 5px);
+    }
+
+}
+
+#moments {
+    left: 17%;
+    top: 25%;
+    font-size: 50px;
+
+    animation-duration: 3.2s;
+    animation-delay: -0.4s;
+}
+
+#movement {
+    left: 60%;
+    top: 45%;
+    font-size: 50px;
+
+    animation-duration: 3.8s;
+    animation-delay: -1.2s;
+}
+
+#elegance {
+    left: 76%;
+    top: 30%;
+    font-size: 50px;
+    font-style: italic;
+
+    animation-duration: 3.4s;
+    animation-delay: -2s;
+}
+
+#ko1 {
+    left: 48%;
+    top: 34%;
+
+    animation-duration: 3.7s;
+    animation-delay: -0.8s;
+}
+
+#ko2 {
+    left: 30%;
+    top: 40%;
+
+    animation-duration: 4.1s;
+    animation-delay: -1.7s;
+}
+
+#ko3 {
+    left: 5%;
+    top: 45%;
+
+    animation-duration: 3.5s;
+    animation-delay: -2.3s;
+}
+
+#ko4 {
+    left: 87%;
+    top: 47%;
+
+    animation-duration: 3.9s;
+    animation-delay: -1.1s;
+}
+
+.ko_word {
+    font-family: "Noto Serif KR";
+    font-size: 26px;
+}
+
+.en_word {
+    font-family: "Philosopher";
+}
+
+.philosophy_final {
+    position: absolute;
+
+    left: 7.5%;
+    top: 60%;
+
+    color: #2b2b2b;
+}
+
+.final_en {
+    height: 1.15em;
+
+    display: flex;
+    align-items: baseline;
+
+    gap: 0.24em;
+
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1.15;
+
+    white-space: nowrap;
+}
+
+.final_en+.final_en {
+    margin-top: 2px;
+}
+
+.final_ko {
+    display: flex;
+    align-items: baseline;
+
+    font-family: "Noto Serif KR";
+    font-size: 26px;
+    line-height: 1.45;
+
+    white-space: nowrap;
+}
+
+.final_en+.final_ko {
+    margin-top: 20px;
+}
+
+.final_ko+.final_ko {
+    margin-top: 1px;
+}
+
+/* =========================
+   단어가 도착할 자리
+========================= */
+
+.word_slot {
+    display: inline-block;
+
+    flex: 0 0 auto;
+
+    visibility: hidden;
+}
+
+.word_slot.italic {
+    font-style: italic;
+}
+
+
+/* ================ OUR STORY ================== */
+
+#story {
+    width: 1520px;
+    margin: 0 auto;
+}
+
+.story_title {
+    font-size: 105px;
+    font-weight: 400;
+    line-height: 1;
+
+    color: #fff;
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+
+    margin-bottom: 30px;
+}
+
+.story_image {
+    width: 100%;
+    height: 738px;
+    position: relative;
+    overflow: hidden;
+}
+
+.story_image>img {
+    display: block;
+    width: 1410px;
+    height: 100%;
+}
+
+.story_copy {
+    position: absolute;
+    top: 130px;
+    right: 0;
+    z-index: 2;
+
+    font-size: 50px;
+    line-height: 1;
+    text-align: right;
+    color: #fff;
+}
+
+.story_copy span {
+    color: #2b2b2b;
+}
+
+.story_copy strong {
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+
+
+/* ==================================================
+   OUR VALUES + CONTACTS
+================================================== */
+
+#values_contact_wrap {
+    width: 100%;
+    position: relative;
+}
+
+
+/* ==================================================
+   VALUES + CONTACTS 공통 배경
+================================================== */
+
+.values_bg_wrap {
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+.values_bg {
+    width: 100%;
+    height: 100vh;
+
+    position: sticky;
+    top: 0;
+
+    background-image: url("../images/sub_aboutus/values2_bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 100% auto;
+}
+
+
+/* =================== OUR VALUES =================== */
+
+#values {
+    width: 1520px;
+    margin: 0 auto;
+
+    padding-top: 300px;
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 1;
+}
+
+
+.values_title {
+    margin-bottom: 30px;
+
+    text-align: right;
+
+    font-size: 105px;
+    font-weight: 400;
+    line-height: 1;
+
+    color: #fff;
+
+    text-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
+}
+
+.values_contents {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.value_row {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.value_row1,
+.value_row2 {
+    margin-bottom: 110px;
+}
+
+
+.value_row3 {
+    margin-bottom: 110px;
+}
+
+.value_image {
+    width: 600px;
+    height: 650px;
+
+    overflow: hidden;
+
+    flex-shrink: 0;
+}
+
+
+.value_image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.value_item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+
+.value_line {
+    display: block;
+
+    width: 18px;
+    height: 320px;
+
+    object-fit: fill;
+
+    flex-shrink: 0;
+}
+
+
+.value_line.left {
+    margin-left: -36px;
+}
+
+
+.value_line.right {
+    margin-right: -36px;
+}
+
+
+.value_text h3 {
+    margin-top: 10px;
+    margin-bottom: 100px;
+
+    font-size: 50px;
+    font-weight: 400;
+}
+
+
+.value_text h3 em {
+    margin-right: 5px;
+
+    color: #848484;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.value_desc {
+    margin-bottom: 13px;
+
+    font-family: "Noto Serif KR";
+    font-size: 28px;
+}
+
+.value_small {
+    font-family: "Noto Serif KR";
+    font-size: 16px;
+}
+
+.value_comfort {
+    text-align: right;
+}
+
+.value_link {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 35px;
+
+    font-size: 50px;
+    color: #2b2b2b;
+    opacity: 0.8;
+}
+
+.value_link:hover {
+    opacity: 1;
+}
+
+.value_link_arrow {
+    display: block;
+    width: 32px;
+    opacity: 0.7;
+}
+
+
+/* ================== CONTACTS ================== */
+
+#contacts {
+    width: 1520px;
+    margin: 0 auto;
+
+    padding-top: 100px;
+    padding-bottom: 130px;
+
+    box-sizing: border-box;
+
+    position: relative;
+    z-index: 1;
+}
+
+.contacts_title {
+    margin-bottom: 50px;
+
+    font-size: 105px;
+    font-weight: 400;
+    line-height: 1;
+
+    color: #2b2b2b;
+    opacity: 0.6;
+}
+
+.contacts_list {
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.contact_item {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.contact_name {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1;
+    color: #2b2b2b;
+}
+
+.contact_arrow {
+    display: block;
+    width: 32px;
+    height: auto;
+    margin: 0;
+    opacity: 0.7;
+}
+
+.contact_line {
+    display: block;
+
+    width: 100%;
+    object-fit: fill;
+    margin-top: 8px;
+    opacity: 0.8;
+}
+
+
+/* ================== footer ================== */
+
+#footer {
+    width: 100%;
+    padding: 70px 0;
+    border-top: 1px solid #8c847d;
+}
+.inner_footer {
+    width: 1630px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+}
+.footer_logo {
+    width: 300px;
+}
+.footer_logo img {
+    display: block;
+    width: 177px;
+}
+.footer_menu {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+}
+.footer_menu ul {
+    width: 200px;
+}
+.footer_menu li {
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+.footer_menu li:hover {
+    font-weight: bold;
+}
+.footer_menu li:last-child {
+    margin-bottom: 0;
+}
+.social {
+    width: 130px;
+    margin-left: 60px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+.social li {
+    opacity: 0.8;
+}
+.social li:hover {
+    opacity: 1;
+}
+.social img {
+    display: block;
+    width: 40px;
+}
