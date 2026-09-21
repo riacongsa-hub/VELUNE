@@ -1,0 +1,752 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: "Philosopher", "Noto Serif KR", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2b2b2b;
+}
+
+#wrap {
+    min-width: 1904px;
+    background-color: #f6f1eb;
+}
+
+/* =============== header =============== */
+/* promotion_slide */
+#promotion_slide {
+    width: 100%;
+    height: 30px;
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    padding-top: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#promotion_slide ul {
+    position: relative;
+}
+
+#promotion_slide li {
+    height: 30px;
+    text-align: center;
+}
+
+/* ================ gnb ================ */
+
+#gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1844px;
+    height: 70px;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    transition: transform 0.4s ease;
+}
+#gnb.fixed {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    background-color: transparent;
+}
+#gnb.fixed.hide {
+    transform: translateY(-100%);
+}
+.gnb_wrap {
+    width: 40%;
+    display: flex;
+    gap: 40px;
+}
+
+.logo {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.util {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+.util img {
+    width: 24px;
+}
+.util li:nth-child(3) img {
+    width: 25px;
+}
+
+
+/* tab */
+#tab {
+    width: 260px;
+    margin: 120px auto 40px;
+}
+
+.tab_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu a {
+    display: block;
+    font-size: 14px;
+    padding: 0 18px;
+}
+
+.tab_menu li {
+    position: relative;
+}
+
+.tab_menu li::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 1px;
+    background-color: #2b2b2b;
+
+    position: absolute;
+    top: 5px;
+}
+
+.tab_menu li:first-child::after {
+    display: none;
+}
+
+
+/* ==================================================
+   LOOKBOOK
+================================================== */
+
+#lookbook {
+    width: 100%;
+}
+
+
+/* ==================================================
+   TOP VISUAL
+================================================== */
+
+.lookbook_visual {
+    width: 100%;
+    height: 950px;
+
+    overflow: hidden;
+}
+
+
+.lookbook_visual img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   COLLAGE
+================================================== */
+
+.lookbook_collage {
+    width: 1520px;
+    height: 2250px;
+
+    margin: 220px auto 180px;
+
+    position: relative;
+}
+
+
+/* 공통 이미지 */
+
+.look_img {
+    position: absolute;
+
+    overflow: hidden;
+}
+
+
+.look_img img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   IMAGE POSITION
+================================================== */
+
+
+/* 왼쪽 상단 세로 */
+
+.look_img1 {
+    width: 452px;
+    height: 507px;
+
+    top: 394px;
+    left: 0;
+}
+
+
+/* 중앙 상단 */
+
+.look_img2 {
+    width: 549px;
+    height: 708px;
+
+    top: 0;
+    left: 500px;
+}
+
+
+/* 오른쪽 상단 */
+
+.look_img3 {
+    width: 452px;
+    height: 593px;
+
+    top: 0;
+    right: 0;
+}
+
+
+/* 오른쪽 중앙 */
+
+.look_img4 {
+    width: 570px;
+    height: 750px;
+
+    top: 950px;
+    right: 0;
+}
+
+
+/* 왼쪽 하단 작은 이미지 */
+
+.look_img5 {
+    width: 367px;
+    height: 489px;
+
+    top: 1330px;
+    left: 0;
+}
+
+
+/* 중앙 하단 큰 이미지 */
+
+.look_img6 {
+    width: 540px;
+    height: 708px;
+
+    top: 1330px;
+    left: 389px;
+}
+
+
+/* 오른쪽 하단 작은 이미지 */
+
+.look_img7 {
+    width: 390px;
+    height: 510px;
+
+    top: 1720px;
+    right: 180px;
+}
+
+
+/* ==================================================
+   COPY
+================================================== */
+
+.lookbook_copy {
+    position: absolute;
+
+    top: 850px;
+    left: 400px;
+
+    display: flex;
+    align-items: center;
+
+    width: 850px;
+}
+
+
+/* 왼쪽 세로 텍스트 + 라인 */
+
+.copy_side {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.copy_side p {
+    writing-mode: vertical-rl;
+
+    font-family: "Philosopher";
+    font-size: 20px;
+    line-height: 1.4;
+
+    color: #2b2b2b;
+}
+
+
+.copy_side img {
+    display: block;
+
+    width: 8px;
+    height: 243px;
+    margin-left: 7px;
+
+    object-fit: fill;
+}
+
+
+/* 중앙 문구 */
+
+.copy_main {
+    margin-left: 90px;
+}
+
+.copy_main strong {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.copy_ko {
+    margin-bottom: 20px;
+
+    font-family: "Noto Serif KR";
+    font-size: 20px;
+
+    color: #a89f94;
+}
+
+
+.copy_en {
+    font-family: "Philosopher";
+    font-size: 22px;
+    line-height: 1.5;
+
+    text-align: center;
+
+    color: #2b2b2b;
+}
+
+
+.copy_en em {
+    font-style: italic;
+}
+
+
+
+/* ==================================================
+   LOOKBOOK 02
+================================================== */
+
+#lookbook2 {
+    width: 100%;
+}
+
+
+/* ==================================================
+   TOP VISUAL
+================================================== */
+
+.lookbook2_visual {
+    width: 100%;
+    height: 820px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.lookbook2_visual > img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* 메인 이미지 위 문구 */
+
+.lookbook2_visual_copy {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    font-family: "Philosopher";
+    font-size: 70px;
+    text-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    font-weight: 400;
+
+    letter-spacing: 0.06em;
+
+    color: #f6f1eb;
+}
+
+
+/* ==================================================
+   COLLAGE
+================================================== */
+
+.lookbook2_collage {
+    width: 1520px;
+    height: 1900px;
+
+    margin: 220px auto 180px;
+
+    position: relative;
+}
+
+
+/* 공통 이미지 */
+
+.look2_img {
+    position: absolute;
+
+    overflow: hidden;
+}
+
+
+.look2_img img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ==================================================
+   IMAGE POSITION
+================================================== */
+
+
+/* 왼쪽 상단 */
+
+.look2_img1 {
+    width: 530px;
+    height: 700px;
+
+    top: 0;
+    left: 0;
+}
+
+
+/* 중앙 상단 */
+
+.look2_img2 {
+    width: 470px;
+    height: 570px;
+
+    top: 129px;
+    left: 555px;
+}
+
+
+/* 오른쪽 상단 */
+
+.look2_img3 {
+    width: 470px;
+    height: 570px;
+
+    top: 220px;
+    right: 0;
+}
+
+
+/* 왼쪽 하단 와이드 */
+
+.look2_img4 {
+    width: 860px;
+    height: 598px;
+
+    top: 1050px;
+    left: 120px;
+}
+
+
+/* 오른쪽 하단 */
+
+.look2_img5 {
+    width: 500px;
+    height: 680px;
+
+    top: 1130px;
+    right: 0;
+}
+
+
+/* 맨 아래 왼쪽 슈즈 */
+
+.look2_img6 {
+    width: 429px;
+    height: 277px;
+
+    top: 1680px;
+    left: 0;
+}
+
+
+/* ==================================================
+   TOP COPY
+================================================== */
+
+.lookbook2_top_copy {
+    position: absolute;
+
+    top: 30px;
+    left: 850px;
+
+    display: flex;
+    align-items: flex-end;
+
+    gap: 30px;
+}
+
+
+.lookbook2_top_copy p {
+    font-size: 20px;
+
+    color: #2b2b2b;
+}
+
+
+.lookbook2_top_copy p em {
+    font-style: italic;
+}
+
+
+.lookbook2_top_copy img {
+    display: block;
+
+    width: 220px;
+    height: auto;
+
+    margin-bottom: 5px;
+}
+
+
+/* ==================================================
+   CENTER COPY
+================================================== */
+
+.lookbook2_center_copy {
+    position: absolute;
+
+    top: 820px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    text-align: center;
+}
+
+
+.lookbook2_en {
+    margin-bottom: 18px;
+
+    font-family: "Philosopher";
+    font-size: 22px;
+    font-style: italic;
+
+    color: #a89f94;
+}
+
+
+.lookbook2_ko {
+    font-family: "Noto Serif KR";
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #2b2b2b;
+}
+
+
+/* ================== footer ================== */
+
+#footer {
+    width: 100%;
+    padding: 70px 0;
+    border-top: 1px solid #8c847d;
+    background-color: #f6f1eb;
+}
+
+.inner_footer {
+    width: 1630px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer_logo {
+    width: 300px;
+}
+
+.footer_logo img {
+    display: block;
+    width: 177px;
+}
+
+.footer_menu {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_menu ul {
+    width: 200px;
+}
+
+.footer_menu li {
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+
+.footer_menu li:hover {
+    font-weight: bold;
+}
+
+.footer_menu li:last-child {
+    margin-bottom: 0;
+}
+
+.social {
+    width: 130px;
+    margin-left: 60px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+.social li {
+    opacity: 0.8;
+}
+
+.social li:hover {
+    opacity: 1;
+}
+
+.social img {
+    display: block;
+    width: 40px;
+}

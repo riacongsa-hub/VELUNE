@@ -1,0 +1,710 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: "Philosopher", "Noto Serif KR", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2b2b2b;
+}
+
+#wrap {
+    min-width: 1904px;
+    background-color: #f6f1eb;
+}
+
+/* =============== header =============== */
+/* promotion_slide */
+#promotion_slide {
+    width: 100%;
+    height: 30px;
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    padding-top: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#promotion_slide ul {
+    position: relative;
+}
+
+#promotion_slide li {
+    height: 30px;
+    text-align: center;
+}
+
+/* ================ gnb ================ */
+
+#gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1844px;
+    height: 70px;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    transition: transform 0.4s ease;
+}
+#gnb.fixed {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    background-color: transparent;
+}
+#gnb.fixed.hide {
+    transform: translateY(-100%);
+}
+.gnb_wrap {
+    width: 40%;
+    display: flex;
+    gap: 40px;
+}
+
+.logo {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.util {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+.util img {
+    width: 24px;
+}
+.util li:nth-child(3) img {
+    width: 25px;
+}
+
+/* 전체 1320px */
+#inner_wrap {
+    width: 1320px;
+    margin: 120px auto;
+}
+
+/* tab */
+#tab {
+    width: 260px;
+    margin: 0 auto;
+}
+
+.tab_menu {
+    display: flex;
+    justify-content: center;
+}
+
+.menu a {
+    display: block;
+    font-size: 14px;
+    padding: 0 18px;
+}
+
+.tab_menu li {
+    position: relative;
+}
+
+.tab_menu li::after {
+    content: "";
+    display: block;
+    height: 10px;
+    width: 1px;
+    background-color: #2b2b2b;
+
+    position: absolute;
+    top: 5px;
+}
+
+.tab_menu li:first-child::after {
+    display: none;
+}
+
+/* ==================== page map ==================== */
+.page_map {
+    margin: 30px 0 10px;
+    text-align: end;
+    font-size: 12px;
+    letter-spacing: 0.06em;
+}
+
+/* =================== notice =================== */
+
+#notice {
+    width: 100%;
+    margin-top: 45px;
+}
+
+
+/* NOTICE 제목 */
+
+#notice .title {
+    margin-bottom: 55px;
+
+    text-align: center;
+
+    font-family: "Philosopher";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* 질문 전체 */
+
+#notice > ul {
+    width: 100%;
+
+    border-top: 1px solid rgba(43, 43, 43, 0.35);
+}
+
+
+#notice > ul > li {
+    width: 100%;
+
+    border-bottom: 1px solid rgba(43, 43, 43, 0.35);
+}
+
+
+/* 질문박스 */
+
+.notice_Q {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 18px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    cursor: pointer;
+}
+
+
+/* 왼쪽 질문 텍스트 */
+
+.notice_Q > p {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.notice_Q > p strong {
+    font-family: "Philosopher";
+    font-size: 13px;
+    font-weight: 400;
+    color: #666;
+    letter-spacing: 0.1em;
+}
+
+
+.notice_Q > p em {
+    font-family: "Noto Serif KR";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* 오른쪽 화살표 */
+
+.notice_Q > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.notice_Q > span img {
+    display: block;
+
+    width: 11px;
+    height: auto;
+
+    transition: transform 0.3s ease;
+}
+
+
+/* 질문이 열렸을 때 화살표 */
+
+.notice_Q > span img.turn {
+    transform: rotate(180deg);
+}
+
+
+/* =================== ANSWER =================== */
+
+.answer {
+    width: 100%;
+
+    padding: 28px 32px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 24px;
+
+    background-color: #d9cfc3;
+
+    color: #2b2b2b;
+}
+
+
+.answer > strong {
+    flex-shrink: 0;
+
+    font-family: "Philosopher";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+.answer > p {
+    font-family: "Noto Serif KR";
+    font-size: 14px;
+    line-height: 1.8;
+
+    font-weight: 400;
+}
+
+
+/* =================== FAQ =================== */
+
+#faq {
+    width: 100%;
+
+    margin-top: 150px;
+    margin-bottom: 120px;
+}
+
+
+/* FAQ TITLE */
+
+.faq_title {
+    margin-bottom: 45px;
+
+    text-align: center;
+
+    font-family: "Philosopher";
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =================== FAQ SEARCH =================== */
+
+.faq_search {
+    margin: 0 0 22px 18px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.faq_search select {
+    width: 72px;
+    height: 35px;
+    padding-left: 10px;
+
+    border: 1px solid rgba(43, 43, 43, 0.35);
+    background-color: transparent;
+
+    font-family: "Noto Serif KR";
+    font-size: 13px;
+    color: #2b2b2b;
+
+    outline: none;
+}
+
+
+.search_box {
+    width: 310px;
+    height: 35px;
+
+    padding: 0 9px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border: 1px solid rgba(43, 43, 43, 0.35);
+}
+
+
+.search_box input {
+    width: calc(100% - 26px);
+
+    border: 0;
+    outline: 0;
+
+    background-color: transparent;
+
+    font-family: "Philosopher";
+    font-size: 11px;
+
+    color: #2b2b2b;
+}
+
+
+.search_box input::placeholder {
+    color: #8b837b;
+}
+
+
+.search_box button {
+    border: 0;
+
+    background-color: transparent;
+
+    cursor: pointer;
+}
+
+
+.search_box button img {
+    display: block;
+
+    width: 15px;
+    height: auto;
+}
+
+
+/* =================== FAQ LIST =================== */
+
+.faq_list {
+    width: 100%;
+
+    border-top: 1px solid rgba(43, 43, 43, 0.35);
+}
+
+
+.faq_list > li {
+    width: 100%;
+
+    border-bottom: 1px solid rgba(43, 43, 43, 0.35);
+}
+
+
+/* 질문 */
+
+.faq_Q {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 18px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    cursor: pointer;
+}
+
+
+.faq_Q > p {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.faq_Q > p strong {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.faq_Q > p span {
+    font-family: "Noto Serif KR";
+    font-size: 13px;
+
+    color: #666;
+
+    letter-spacing: 0.1em;
+}
+
+
+.faq_Q > p em {
+    font-family: "Noto Serif KR";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* 오른쪽 화살표 */
+
+.faq_arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.faq_arrow img {
+    display: block;
+
+    width: 11px;
+    height: auto;
+
+    transition: transform 0.3s ease;
+}
+
+
+.faq_arrow img.turn {
+    transform: rotate(180deg);
+}
+
+
+/* =================== FAQ ANSWER =================== */
+
+.faq_answer {
+    width: 100%;
+
+    padding: 28px 32px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: flex-start;
+
+    gap: 24px;
+
+    background-color: #d9cfc3;
+
+    color: #2b2b2b;
+}
+
+
+.faq_answer > strong {
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 400;
+
+    line-height: 1.3;
+}
+
+
+.faq_answer > p {
+    font-family: "Noto Serif KR";
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.8;
+}
+
+
+/* =================== PAGINATION =================== */
+
+.faq_pagination {
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: center;
+
+    gap: 6px;
+}
+
+
+.faq_pagination li {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(43, 43, 43, 0.3);
+}
+
+
+.faq_pagination li a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    color: #666;
+}
+
+
+.faq_pagination li.on {
+    background-color: #666;
+
+    border-color: #666;
+}
+
+
+.faq_pagination li.on a {
+    color: #fff;
+}
+
+
+
+/* ================== footer ================== */
+
+#footer {
+    width: 100%;
+    padding: 70px 0;
+    border-top: 1px solid #8c847d;
+    background-color: #f6f1eb;
+}
+.inner_footer {
+    width: 1630px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+}
+.footer_logo {
+    width: 300px;
+}
+.footer_logo img {
+    display: block;
+    width: 177px;
+}
+.footer_menu {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+}
+.footer_menu ul {
+    width: 200px;
+}
+.footer_menu li {
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+.footer_menu li:hover {
+    font-weight: bold;
+}
+.footer_menu li:last-child {
+    margin-bottom: 0;
+}
+.social {
+    width: 130px;
+    margin-left: 60px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+.social li {
+    opacity: 0.8;
+}
+.social li:hover {
+    opacity: 1;
+}
+.social img {
+    display: block;
+    width: 40px;
+}

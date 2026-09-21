@@ -1,0 +1,413 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+em,
+img,
+small,
+strong,
+b,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tr,
+th,
+td,
+article,
+aside,
+footer,
+header,
+nav,
+section,
+summary,
+video,
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    /* Prevent font scaling in landscape */
+
+    -webkit-text-size-adjust: none;
+    /*Chrome, Safari, newer versions of Opera*/
+
+    -moz-text-size-adjust: none;
+    /*Firefox*/
+
+    -ms-text-size-adjust: none;
+    /*Ie*/
+
+    -o-text-size-adjust: none;
+    /*old versions of Opera*/
+}
+
+body {
+    font-family: "Philosopher", "Noto Serif KR", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #2b2b2b;
+}
+
+#wrap {
+    min-width: 1904px;
+    background-color: #f6f1eb;
+}
+
+/* =============== header =============== */
+/* promotion_slide */
+#promotion_slide {
+    width: 100%;
+    height: 30px;
+    background-color: #2b2b2b;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    padding-top: 6px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+#promotion_slide ul {
+    position: relative;
+}
+
+#promotion_slide li {
+    height: 30px;
+    text-align: center;
+}
+
+/* ================ gnb ================ */
+
+#gnb {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 1844px;
+    height: 70px;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    transition: transform 0.4s ease;
+}
+#gnb.fixed {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 9999;
+
+    background-color: transparent;
+}
+#gnb.fixed.hide {
+    transform: translateY(-100%);
+}
+.gnb_wrap {
+    width: 40%;
+    display: flex;
+    gap: 40px;
+}
+
+.logo {
+    width: 20%;
+    height: 100%;
+    text-align: center;
+}
+
+.logo img {
+    height: 70px;
+}
+
+.util {
+    width: 40%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 40px;
+}
+.util img {
+    width: 24px;
+}
+.util li:nth-child(3) img {
+    width: 25px;
+}
+
+/* ==================================================
+   REVIEW
+================================================== */
+
+#review {
+    width: 1320px;
+    margin: 160px auto 50px;
+}
+
+
+/* ================= TITLE ================= */
+
+.review_title {
+    margin-bottom: 60px;
+
+    text-align: center;
+}
+
+
+.review_title h2 {
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+.review_title p {
+    margin-top: 10px;
+
+    font-size: 30px;
+    line-height: 1;
+
+    color: #a89f94;
+}
+
+
+/* ================= REVIEW LIST ================= */
+
+.review_list {
+    display: grid;
+
+    grid-template-columns: repeat(3, 420px);
+
+    column-gap: 30px;
+    row-gap: 65px;
+}
+
+
+/* ================= REVIEW ITEM ================= */
+
+.review_item {
+    width: 420px;
+}
+
+
+/* 이미지 / 영상 */
+
+.review_media {
+    width: 420px;
+    height: 520px;
+
+    overflow: hidden;
+}
+
+
+.review_media img,
+.review_media video {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* ================= REVIEW INFO ================= */
+
+.review_info {
+    padding-top: 15px;
+}
+
+
+/* 제품명 + 인스타 아이디 */
+
+.review_product {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+
+.review_product h3 {
+    font-size: 20px;
+    font-weight: 400;
+    font-style: italic;
+
+    line-height: 1;
+}
+
+
+.review_product span {
+    font-size: 16px;
+
+    color: #a89f94;
+}
+
+
+/* 리뷰 내용 */
+
+.review_text {
+    margin-top: 14px;
+
+    font-family: "Noto Serif KR";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7;
+
+    color: #2b2b2b;
+}
+
+
+/* 날짜 */
+
+.review_date {
+    margin-top: 5px;
+
+    text-align: right;
+    font-size: 13px;
+
+    color: #2b2b2b;
+}
+
+
+/* =================== PAGINATION =================== */
+
+.pagination {
+    margin-bottom: 120px;
+
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+
+.pagination li {
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid rgba(43, 43, 43, 0.3);
+}
+
+
+.pagination li a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    color: #666;
+}
+
+
+.pagination li.on {
+    background-color: #666;
+
+    border-color: #666;
+}
+
+
+.pagination li.on a {
+    color: #fff;
+}
+
+
+
+/* ================== footer ================== */
+
+#footer {
+    width: 100%;
+    padding: 70px 0;
+    border-top: 1px solid #8c847d;
+    background-color: #f6f1eb;
+}
+.inner_footer {
+    width: 1630px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: flex-start;
+}
+.footer_logo {
+    width: 300px;
+}
+.footer_logo img {
+    display: block;
+    width: 177px;
+}
+.footer_menu {
+    flex: 1;
+
+    display: flex;
+    justify-content: space-between;
+}
+.footer_menu ul {
+    width: 200px;
+}
+.footer_menu li {
+    margin-bottom: 32px;
+    font-size: 14px;
+}
+.footer_menu li:hover {
+    font-weight: bold;
+}
+.footer_menu li:last-child {
+    margin-bottom: 0;
+}
+.social {
+    width: 130px;
+    margin-left: 60px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+.social li {
+    opacity: 0.8;
+}
+.social li:hover {
+    opacity: 1;
+}
+.social img {
+    display: block;
+    width: 40px;
+}
